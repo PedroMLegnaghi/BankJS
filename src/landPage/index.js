@@ -6,4 +6,3 @@ console.log(a instanceof Number);
 if (9 instanceof Number) {
   console.log(`e' um numero!`);
 }
-console.log("i'm a test, trying to push origin master");
