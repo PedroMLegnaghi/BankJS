@@ -14,6 +14,13 @@ export class Loan {
     };
     this.#dateOfLoan = new Date();
   }
+  listProprieties() {
+    return console.log(`dateOfLoan: ${this.#dateOfLoan}
+  amountToLoan: ${this.#amountToLoan}
+  installments: ${this.#installments}
+  situation: ${this.verifySituation()}
+  `);
+  }
   //after every installment payment, verify situation!
   verifySituation() {
     if (this.#situationOfLoanPayment.priceInDebt > 0) {
@@ -43,14 +50,14 @@ export class Loan {
     // console.log(newInterestRate);
     // console.log(typeof newInterestRate);
     if (typeof newInterestRate === "string") {
-      this.#interestRate += newInterestRate / 100;
-      return console.log(`essa e a interestRate${this.#interestRate}`);
+      this.#interestRate = newInterestRate / 100;
+      return console.log(`essa e a interestRate ${this.#interestRate}`);
     } else {
       return console.log("Digite um valor numerico ");
     }
   }
 }
-const a = new Loan(0, 10);
-console.log(a.getAmountToLoan());
-console.log(a.getDateOfLoan());
-console.log(a.verifySituation());
+// const a = new Loan(0, 10);
+// console.log(a.getAmountToLoan());
+// console.log(a.getDateOfLoan());
+// console.log(a.verifySituation());

@@ -15,4 +15,9 @@ export class Installment {
   getNumberOfInstallments() {
     return this.#numberOfInstallments;
   }
+  listProprieties() {
+    return console.log(`installmentPrice: ${this.#installmentPrice}
+  numberOfInstallments: ${this.#numberOfInstallments}
+  `);
+  }
 }
