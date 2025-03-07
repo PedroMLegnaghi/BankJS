@@ -1,4 +1,4 @@
-export class Installment {
+module.exports = class Installment {
   #installmentPrice;
   #numberOfInstallments;
   constructor(numberOfInstallments, amountLoaned) {
@@ -20,4 +20,4 @@ export class Installment {
   numberOfInstallments: ${this.#numberOfInstallments}
   `);
   }
-}
+};

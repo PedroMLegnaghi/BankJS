@@ -1,5 +1,5 @@
-import { Installment } from "./Installment.js";
-export class Loan {
+const Installment = require("./Installment.js");
+module.exports = class Loan {
   static #interestRate = 0;
   #dateOfLoan;
   #amountToLoan;
@@ -56,7 +56,7 @@ export class Loan {
       return console.log("Digite um valor numerico ");
     }
   }
-}
+};
 // const a = new Loan(0, 10);
 // console.log(a.getAmountToLoan());
 // console.log(a.getDateOfLoan());

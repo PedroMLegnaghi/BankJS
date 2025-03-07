@@ -1,5 +1,5 @@
-import { Account } from "./Account.js";
-export class User {
+const Account = require("./Account.js");
+module.exports = class User {
   #fullname;
   #email;
   #account;
@@ -11,13 +11,16 @@ export class User {
   getAccount() {
     return this.#account;
   }
+  getAccountStatus() {
+    return this.#account.get();
+  }
   getFullname() {
     return this.#fullname;
   }
   getEmail() {
     return this.#email;
   }
-}
+};
 // const pedro = new User("Pedro", "pedrox");
 // const fernando = new User("fernando", "fernandox");
 

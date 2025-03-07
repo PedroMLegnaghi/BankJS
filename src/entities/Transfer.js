@@ -1,4 +1,4 @@
-export class Transfer {
+module.exports = class Transfer {
   #dateOfTransfer;
   #amountToTransfer;
   #eventUser;
@@ -28,6 +28,6 @@ export class Transfer {
   amountToTransfer: ${this.getAmountToTransfer()}
   dateOfTransfer: ${this.getDateOfTransfer()}`);
   }
-}
+};
 // const transfer = new Transfer("Pedro", "Fernando", 200);
 // console.log(transfer.listProprieties());

@@ -1,4 +1,4 @@
-export class Deposit {
+module.exports = class Deposit {
   #dateOfDeposit;
   #amountToDepoist;
   constructor(amountToDeposit) {
@@ -10,4 +10,4 @@ export class Deposit {
   amountToDepoist: ${this.#amountToDepoist}
   `);
   }
-}
+};

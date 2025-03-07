@@ -1,0 +1,14 @@
+const App = require("./App");
+App.createUser("Pedro Muller", "pedrox");
+App.createUser("Fernando Legnaghi", "fernandox");
+App.deposit("pedrox", 1000);
+App.deposit("fernandox", 1000);
+App.transference("pedrox", "fernandox", 200);
+App.transference("fernandox", "pedrox", 200);
+App.changeinterestRate(10);
+App.loan("pedrox", 1000, 5);
+console.log(App.findUserByEmail("pedrox"));
+console.table(App.findUserByEmail("pedrox").getAccountStatus());
+console.log(App.findUserByEmail("fernandox"));
+console.table(App.findUserByEmail("fernandox").getAccountStatus());
+// console.log(App.findUserByEmail("naoexisto!").getAccountStatus());

@@ -1,13 +1,21 @@
-import { Deposit } from "./Deposit.js";
-import { Loan } from "./Loan.js";
-import { Transfer } from "./Transfer.js";
-export class Account {
+const Deposit = require("./Deposit.js");
+const Loan = require("./Loan.js");
+const Transfer = require("./Transfer.js");
+module.exports = class Account {
   //only changeable by deposit transfer and loan
   #balance = 0;
   #depositArray = [];
   #loansArray = [];
   #transferencesArray = [];
   constructor() {}
+  get() {
+    return {
+      balance: this.#balance,
+      depositArray: this.#depositArray,
+      loansArray: this.#loansArray,
+      transferencesArray: this.#transferencesArray,
+    };
+  }
   setBalance(amountToAdd) {
     this.#balance += amountToAdd;
   }
@@ -59,4 +67,4 @@ export class Account {
   }
   // if (received) add value to balance and add it to "transferencesArray"
   //if(made) debt from balance and add it to "transferencesArray"
-}
+};
