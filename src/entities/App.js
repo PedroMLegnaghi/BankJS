@@ -22,7 +22,7 @@ module.exports = class App {
     const user = this.#usersList.find((user) => user.getEmail() === email);
     console.log(user);
     if (user != undefined) {
-      console.log(`User ${user.getFullname()}found!`);
+      console.log(`User ${user.getFullname()} found!`);
       return user;
     } else {
       return console.log("User not found!");
